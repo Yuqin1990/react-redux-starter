@@ -1,8 +1,13 @@
-# React + Redux starter
+# Solution for ThoughtWorks Interview Test By Yuqin Shi
 
-This project includes a basic starter boilerplate for our React + Redux +
-React Router projects, using webpack as a build system and babel for
-transpilation.
+This project includes solution the front end developer interview test for Yuqin Shi
+Used Technologies:
+Framework: React + Redux
+Language: ES 6
+Build Tool: Webpack
+Test Tool: Mocha
+UI component: React-Bootstrap
+UI: HTML, CSS, Bootstrap
 
 ## Getting Started
 
@@ -45,7 +50,3 @@ This will build and uglify files to `dist/` ready to push to production.
 * [webpack-dev-server](https://github.com/webpack/webpack-dev-server) - to see it
 * [babel](https://github.com/babel/babel) - to transpile es6
 * [mocha](https://github.com/mochajs/mocha) + [must](https://github.com/moll/js-must) - for testing
-
-## Todos
-
-* Configure react-devtools
