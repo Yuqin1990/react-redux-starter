@@ -15,6 +15,4 @@ export const initialState = {
   ]
 };
 
-export const history = handleActions({
-  CHANGE_NAME: (state, action) => (initialState)
-}, initialState);
+export const history = handleActions({}, initialState);

@@ -1,13 +1,15 @@
 # Solution for ThoughtWorks Interview Test By Yuqin Shi
 
-This project includes solution the front end developer interview test for Yuqin Shi
+This project includes the solution of ThoughtWorks interview test for Yuqin Shi
+It's based on a react-redux-starter, https://github.com/Prismatik/react-redux-starter
+
 Used Technologies:
 Framework: React + Redux
-Language: ES 6
+Language: ES6 (Babel)
 Build Tool: Webpack
 Test Tool: Mocha
 UI component: React-Bootstrap
-Layout: HTML, Bootstrap
+Layout: HTML5, Bootstrap
 Styles: Less
 
 ## Getting Started
@@ -28,6 +30,11 @@ npm run dev
 
 This will start a webpack dev server with hot reloading at
 `http://localhost:9000`.
+
+## Test
+```
+npm test
+```
 
 ## Production
 

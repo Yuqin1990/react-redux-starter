@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 
-import { Nav, NavItem, Panel, ListGroup, PageHeader } from 'react-bootstrap';
+import { Nav, NavItem, Panel } from 'react-bootstrap';
 
 // Subcomponents
 import StatusBar from './statusBar';

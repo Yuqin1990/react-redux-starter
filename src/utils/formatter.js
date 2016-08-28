@@ -11,8 +11,8 @@ export default class Formmater {
       });
       returnArr.push(
         <div>
-          <span className="col-xs-8">{ sa }</span>
-          <span className="col-xs-4">{ items.length }</span>
+          <span className="col-xs-7">{ sa }</span>
+          <span className="col-xs-5">{ items.length }</span>
         </div>
       )
     });

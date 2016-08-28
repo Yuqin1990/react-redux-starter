@@ -68,7 +68,7 @@ class StatusBar extends Component {
       'col-xs-12': true
     });
     return (
-      <Well className={ this.props.data.result === 'Deny' ? 'deny-result-well': 'normal-result-well' } bsSize="large">
+      <div className={ this.props.data.result === 'Deny' ? 'well deny-result-well': 'well normal-result-well' } bsSize="large">
         <div className="col-xs-1 status-icon">
           <svg height="50" width="50">
             <circle cx="25" cy="25" r="20" stroke="grey" strokeWidth="0" fill="grey" />
@@ -93,7 +93,6 @@ class StatusBar extends Component {
                 <AddResourceDialog
                   show={ this.state.show }
                   onHide={ this.hideDialog }
-                  constainer={ this }
                   target={ this._target }
                   text={ this.state.text }
                   handleInputChange={ this.handleInputChange }
@@ -110,8 +109,7 @@ class StatusBar extends Component {
           }
           <span className="deny-label"> { this.props.data.result }</span>
         </div>
-
-      </Well>
+      </div>
     );
   }
 

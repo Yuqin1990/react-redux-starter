@@ -39,7 +39,7 @@ export const initialState = {
 
 export const status = handleActions({
   REMOVE_RESOURCE: (state, action) => {
-    let item = state.list[action.payload.id]
+    let item = Object.assign({}, _.find(state.list, i => i.id === action.payload.id));
     let oldRs = item.resources;
     let resources = {
       resources: _.reject(oldRs, r => r === action.payload.resource)
@@ -53,7 +53,7 @@ export const status = handleActions({
     }
   },
   ADD_RESOURCE: (state, action) => {
-    let item = state.list[action.payload.id]
+    let item = Object.assign({}, _.find(state.list, i => i.id === action.payload.id));
     let oldRs = item.resources;
     let resources = {
       resources: _.uniq(oldRs.concat(action.payload.newResrouces))
