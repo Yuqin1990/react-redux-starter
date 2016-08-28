@@ -15,3 +15,20 @@ ListItem.propTypes = {
 };
 
 export default ListItem;
+
+/**
+ * Component for rendering list item
+ * @component ListItem
+ */
+
+/**
+ * Title of the list
+ * @prop title
+ * @type string
+ */
+
+/**
+ * List data
+ * @prop data
+ * @type array
+ */

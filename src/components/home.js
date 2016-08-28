@@ -31,10 +31,32 @@ const Home = props => (
 );
 
 Home.propTypes = {
-    handleAddClick: PropTypes.func.isRequired,
-    handleRemoveClick: PropTypes.func.isRequired,
     showModal: PropTypes.bool.isRequired,
+    showSignInDialog: PropTypes.func.isRequired,
     hideSignInDialog: PropTypes.func.isRequired
 };
 
 export default Home;
+
+/**
+ * Component for rendering the home page
+ * @component Home
+ */
+
+/**
+ * Whether to show the sign in modal
+ * @prop showModal
+ * @type boolean
+ */
+
+/**
+ * Callback to close the modal
+ * @prop hideSignInDialog
+ * @type function
+ */
+
+/**
+ * Callback to open the signIn modal
+ * @prop showSignInDialog
+ * @type function
+ */

@@ -122,3 +122,44 @@ StatusBar.propTypes = {
 };
 
 export default StatusBar;
+
+/**
+ * Component for rendering signle test details and result
+ * @component StatusBar
+ */
+
+/**
+ * Test detatils like: url, status, path, result, resources
+ * @prop data
+ * @type object
+ */
+
+/**
+ * Callback triggered when user click on add resource button
+ * @prop handleAddClick
+ * @type function
+ */
+
+/**
+ * Callback triggered when user click on a resource's close button
+ * @prop handleRemoveClick
+ * @type function
+ */
+
+/**
+ * Callback triggered when user click on a resource's close button
+ * @prop handleRemoveClick
+ * @type function
+ */
+
+/**
+ * Keep track of user's input for new resources
+ * @state text
+ * @type string
+ */
+
+/**
+ * Whether to show the create new resource dialog
+ * @state show
+ * @type boolean
+ */

@@ -8,7 +8,19 @@ const Pillbox = props => (
 );
 
 Pillbox.propTypes = {
-  label: PropTypes.string.isRequired
+  label: PropTypes.string.isRequired,
+  handleRemoveResource: PropTypes.func.isRequired
 };
 
 export default Pillbox;
+
+/**
+ * Component for rendering signle resource with remove button
+ * @component Pillbox
+ */
+
+/**
+ * Callback trigged when user click on remove button
+ * @prop handleRemoveResource
+ * @type function
+ */

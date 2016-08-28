@@ -25,3 +25,20 @@ SignInModal.propTypes = {
 };
 
 export default SignInModal;
+
+/**
+ * Component for rendering the sign in dialog
+ * @component SignInModal
+ */
+
+/**
+ * Callback to close the signIn modal
+ * @prop handleHideModal
+ * @type function
+ */
+
+/**
+ * Whether to show the modal
+ * @prop showModal
+ * @type boolean
+ */

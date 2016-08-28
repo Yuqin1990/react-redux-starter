@@ -9,7 +9,7 @@ describe('./components/dialog', () => {
       const props = {
         show: false,
         handleRemoveResource: () => {},
-        target: {},
+        target: (<div>target node</div>),
         onHide: () => {},
         text: '',
         handleInputChange: () => {},
@@ -21,7 +21,7 @@ describe('./components/dialog', () => {
           show={ false }
           onHide={ () => {} }
           placement="bottom"
-          container={ {} }
+          container={ props.target }
         >
           <div>
             <svg className="create-resource-dialog-pointer" height="20" width="40">

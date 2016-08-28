@@ -19,7 +19,9 @@ describe('./components/statusBar', () => {
           path: 'src/yuqin/happy',
           resources: ['chrome', 'ubuntu'],
           result: 'Deny'
-        }
+        },
+        handleRemoveClick: () => {},
+        handleAddClick: () => {}
       };
       const rendered = (
         <div className="well deny-result-well" bsSize="large">
@@ -66,7 +68,6 @@ describe('./components/statusBar', () => {
     });
 
     it('Should render the StatusBar components with no result', () => {
-
       const props = {
         data: {
           url: 'www.test.com',
@@ -75,7 +76,9 @@ describe('./components/statusBar', () => {
           path: 'src/yuqin/happy',
           resources: ['chrome', 'ubuntu'],
           result: ''
-        }
+        },
+        handleRemoveClick: () => {},
+        handleAddClick: () => {}
       };
       const rendered = (
         <div className="well normal-result-well" bsSize="large">

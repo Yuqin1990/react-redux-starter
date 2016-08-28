@@ -38,5 +38,26 @@ const Content = (props) => (
   </Panel>
 );
 
+Content.propTypes = {
+  status: PropTypes.array,
+  history: PropTypes.array
+};
 
 export default Content;
+
+/**
+ * Component for displaying the content for each nav bar
+ * @component Content
+ */
+
+/**
+ * Data for displaying the details for each test
+ * @prop status
+ * @type array
+ */
+
+/**
+ * Data for displaying test history
+ * @prop history
+ * @type array
+ */
