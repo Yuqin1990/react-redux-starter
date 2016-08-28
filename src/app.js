@@ -1,4 +1,6 @@
 import React from 'react';
+import 'babel-polyfill';
+
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { Router, hashHistory } from 'react-router';

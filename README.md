@@ -12,6 +12,8 @@ UI component: React-Bootstrap
 Layout: HTML5, Bootstrap
 Styles: Less
 
+Tested in Chrome, Firefox, IE 9+
+
 ## Getting Started
 
 
@@ -22,14 +24,6 @@ npm run dev
 
 Browse to `http://localhost:9000`.
 
-## Development
-
-```
-npm run dev
-```
-
-This will start a webpack dev server with hot reloading at
-`http://localhost:9000`.
 
 ## Test
 ```
