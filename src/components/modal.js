@@ -13,7 +13,7 @@ const SignInModal = (props) => (
     </Modal.Body>
 
     <Modal.Footer>
-      <Button onClick={ props.handleHideModal }>Cancel</Button>
+      <Button className="modal-cancel-btn" onClick={ props.handleHideModal }>Cancel</Button>
       <Button bsStyle="primary">Sign In</Button>
     </Modal.Footer>
   </Modal>

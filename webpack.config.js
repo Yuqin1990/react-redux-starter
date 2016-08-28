@@ -22,7 +22,7 @@ var environments = {
           test: /\.css$/,
           loader: "style-loader!css-loader"
         },
-        { 
+        {
           test: /\.png$/,
           loader: "url-loader?limit=100000"
         },
@@ -45,6 +45,10 @@ var environments = {
         {
           test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
           loader: 'url?limit=10000&mimetype=image/svg+xml'
+        },
+        {
+          test: /\.less$/,
+          loader: "style!css!less"
         }
       ]
     },

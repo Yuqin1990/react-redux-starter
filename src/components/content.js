@@ -12,9 +12,9 @@ import FormatterUtils from '../utils/formatter';
 const header = (
   <Nav bsStyle="pills" activeKey={2}>
     <NavItem key="navItem-1" eventKey={0} disabled><h4>Agents</h4></NavItem>
-    <NavItem key="navItem-2" eventKey={1}>All</NavItem>
-    <NavItem key="navItem-3" eventKey={2}>Physical</NavItem>
-    <NavItem key="navItem-4" eventKey={3}>Virtual</NavItem>
+    <NavItem key="navItem-2" className="nav-pills-item" eventKey={1}>All</NavItem>
+    <NavItem key="navItem-3" className="nav-pills-item" eventKey={2}>Physical</NavItem>
+    <NavItem key="navItem-4" className="nav-pills-item" eventKey={3}>Virtual</NavItem>
   </Nav>
 );
 

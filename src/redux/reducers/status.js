@@ -45,25 +45,26 @@ export const status = handleActions({
       resources: _.reject(oldRs, r => r === action.payload.resource)
     };
     let newItem = Object.assign(item, resources);
+    let newList = state.list.map(l => {
+      return l.id === action.payload.id ? newItem : l
+    });
     return {
-      list: [
-        ...state.list,
-        newItem
-      ]
+      list: newList
     }
   },
   ADD_RESOURCE: (state, action) => {
     let item = state.list[action.payload.id]
     let oldRs = item.resources;
     let resources = {
-      resources: oldRs.concat(action.payload.newResrouces)
+      resources: _.uniq(oldRs.concat(action.payload.newResrouces))
     };
+
     let newItem = Object.assign(item, resources);
+    let newList = state.list.map(l => {
+      return l.id === action.payload.id ? newItem : l
+    });
     return {
-      list: [
-        ...state.list,
-        newItem
-      ]
+      list: newList
     }
   }
 }, initialState);

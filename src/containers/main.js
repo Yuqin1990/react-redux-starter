@@ -1,5 +1,8 @@
 import React, { PropTypes, Component } from 'react';
+
+// Styles
 import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
+import Styles from '../styles/styles.less'
 
 import { connect } from 'react-redux';
 import Home from '../components/home';

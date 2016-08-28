@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import _ from 'underscore';
+import classNames from 'classnames';
 
 import { Well, OverlayTrigger, Popover } from 'react-bootstrap';
 import Pillbox from './pillbox';
@@ -62,23 +63,33 @@ class StatusBar extends Component {
   }
 
   render() {
+    let targetClassName = classNames({
+      'popover-target': this.state.show,
+      'col-xs-12': true
+    });
     return (
-      <Well bsSize="large">
+      <Well className={ this.props.data.result === 'Deny' ? 'deny-result-well': 'normal-result-well' } bsSize="large">
         <div className="col-xs-1 status-icon">
-
+          <svg height="50" width="50">
+            <circle cx="25" cy="25" r="20" stroke="grey" strokeWidth="0" fill="grey" />
+          </svg>
         </div>
-        <div className="col-xs-10 row status-details">
-          <div className="col-xs-12">
+        <div className="col-xs-9 row status-details">
+          <div className="col-xs-12 status-items">
             <span className="test-url">{ this.props.data.url }</span>
             <span className="test-status">{ this.props.data.status }</span>
             <span className="test-ip">{ this.props.data.ip }</span>
             <span className="test-path">{ this.props.data.path }</span>
           </div>
-          <div className="col-xs-12">
+          <div className="col-xs-12 status-resources">
               <a onClick={ this.showDialog } className="specify-resource-link">
-                <span className="glyphicon glyphicon-plus" aria-hidden="true"></span> Specify Resource
+                <span className="glyphicon glyphicon-plus" aria-hidden="true"></span> <span className="specify-resource-label">Specify Resource</span>
               </a>
-              <div ref={ this.initTarget } className="popover-target">
+              <span className="resource-label">  Resource:</span>
+              {
+                this.props.data.resources.map((r,idx) => (<Pillbox key={ `resource-pillbox-${idx}` } label={ r } handleRemoveResource={ this.handleRemoveResource }/>))
+              }
+              <div ref={ this.initTarget } className={ targetClassName }>
                 <AddResourceDialog
                   show={ this.state.show }
                   onHide={ this.hideDialog }
@@ -90,14 +101,14 @@ class StatusBar extends Component {
                 />
               </div>
 
-            <span>Resource:</span>
-            {
-              this.props.data.resources.map((r,idx) => (<Pillbox key={ `resource-pillbox-${idx}` } label={ r } handleRemoveResource={ this.handleRemoveResource }/>))
-            }
+
           </div>
         </div>
-        <div className="col-xs-1 test-result">
-          <span className="glyphicon glyphicon-ban-circle"></span> { this.props.data.result }
+        <div className="col-xs-2 test-result">
+          {
+            this.props.data.result === 'Deny' ? <span className="glyphicon glyphicon-ban-circle"></span> : null
+          }
+          <span className="deny-label"> { this.props.data.result }</span>
         </div>
 
       </Well>

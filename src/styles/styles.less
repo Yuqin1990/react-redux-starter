@@ -1,0 +1,191 @@
+.tw-hw-app {
+  .sign-in-sign-out {
+    text-align: right;
+    .sign-in-link {
+      color: black;
+    }
+    .member-label {
+      text-decoration: underline;
+      margin-right: 10px;
+    }
+    .glyphicon {
+      margin-right: 5px;
+      font-size: 15px;
+    }
+    .sign-out-label {
+      text-decoration: underline;
+    }
+  }
+  .cruise-form {
+    .form-title {
+      font-size: 50px;
+      font-weight: 400;
+    }
+    ul.nav-tabs {
+      margin-top: 50px;
+      li {
+        float: right;
+        border: solid 2px black;
+        border-bottom: none;
+        border-radius: 15px 15px 0px 0px;
+        margin-right: 10px;
+        z-index: 100;
+        a {
+          color: black;
+          font-weight: bold;
+        }
+      }
+      .active {
+        background-color: #606060;
+        margin-bottom: -3px;
+        a {
+          background-color: #606060;
+          border-radius: 15px 15px 0px 0px;
+          color: white;
+        }
+      }
+
+    }
+    .panel {
+      border: solid 2px black;
+      .panel-heading {
+        background-color: #606060;
+        h4 {
+          color: white;
+          font-weight: 100;
+        }
+        .nav-pills-item {
+          margin-top: 20px;
+          background-color: #939393;
+          border: solid 2px black;
+          border-radius: 20px;
+          height:30px;
+          line-height: 0.5;
+          a {
+            color: black;
+          }
+          a:hover {
+            background-color: #DADADA;
+            border-radius: 20px;
+          }
+        }
+        .active {
+          a {
+            background-color: #DADADA;
+            border-radius: 20px;
+            zoom: 0.9;
+          }
+          a:hover {
+            background-color: #DADADA;
+            border-radius: 20px;
+          }
+        }
+      }
+      .panel-body {
+        padding: 0px;
+        border-top: solid 2px black;
+        .status-bar-list {
+          border-right: solid 2px #606060;
+          height: 440px;
+          .well-lg {
+            margin-top: 20px;
+            background-color: #CDE8B8;
+            height: 60px;
+            padding: 5px;
+            border: solid 1px black;
+            .status-details {
+              .status-items {
+                span {
+                  padding-right: 5px;
+                  margin-right: 5px;
+                  border-right: solid 2px grey;
+                  font-weight: bold;
+                }
+                .test-url {
+                  padding-right: 25px;
+                }
+                .test-path {
+                  border-right: none;
+                }
+              }
+              .popover-target {
+                .create-resource-dialog-pointer {
+                  margin-bottom: -9px;
+                  margin-left: 20px;
+                  border-bottom: solid 2px #E1EDD6;
+                }
+                .create-resource-form {
+                  border-radius: 20px;
+                  background: #E1EDD6;
+                  padding: 10px;
+                  border: solid 2px black;
+                  button {
+                    margin-top: 5px;
+                    border-radius: 10px;
+                    height: 25px;
+                    background-color: white;
+                    border: solid 2px black;
+                    font-weight: bold;
+                  }
+                }
+                position: absolute;
+                z-index: 1000;
+                border-radius: 10px;
+              }
+              .status-resources {
+                a {
+                  color: black;
+                  border-right: solid 2px grey;
+                  padding-right: 5px;
+                  .glyphicon {
+                    font-size: 10px;
+                  }
+                  .specify-resource-label {
+                    text-decoration: underline;
+                  }
+                }
+                .resource-pillbox {
+                  display: inline-block;
+                  margin-left: 10px;
+                  .glyphicon {
+                    border: solid 2px grey;
+                    border-radius: 5px;
+                    color: grey;
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+            .test-result {
+              margin-top: 25px;
+              .deny-label {
+                text-decoration: underline;
+              }
+            }
+          }
+          .normal-result-well {
+            background-color: #FFFBBD;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+.modal-dialog {
+  .modal-header {
+    text-align: center;
+  }
+  .modal-body {
+    height: 120px;
+    border-bottom: none;
+    input {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  .modal-cancel-btn {
+    float: left;
+  }
+}

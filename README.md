@@ -7,7 +7,8 @@ Language: ES 6
 Build Tool: Webpack
 Test Tool: Mocha
 UI component: React-Bootstrap
-UI: HTML, CSS, Bootstrap
+Layout: HTML, Bootstrap
+Styles: Less
 
 ## Getting Started
 
