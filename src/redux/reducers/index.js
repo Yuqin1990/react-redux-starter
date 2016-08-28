@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import { hello } from './hello';
+import { status } from './status';
+import { history } from './history';
 
 export default combineReducers({
-  hello
+  status,
+  history
 });

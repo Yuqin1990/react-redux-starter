@@ -3,24 +3,38 @@ import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
 
 import { connect } from 'react-redux';
 import Home from '../components/home';
-import { changeName } from '../redux/actions/hello';
+import { addResource, removeResource } from '../redux/actions/status';
 
 class HomeContainer extends Component {
     constructor(props) {
         super(props);
 
-        this.handleSelect = this.handleSelect.bind(this);
+        this.showSignInDialog = this.showSignInDialog.bind(this);
+        this.hideSignInDialog = this.hideSignInDialog.bind(this);
+
+        this.state = {
+          showModal: false
+        };
     }
 
-    handleSelect(eventKey) {
-        event.preventDefault();
-        alert(`selected ${eventKey}`);
+    showSignInDialog() {
+      this.setState({
+        showModal: true
+      });
+    }
+
+    hideSignInDialog() {
+      this.setState({
+        showModal: false
+      });
     }
 
     render() {
         return (
             <Home {...this.props}
-                handleSelect={ this.handleSelect }
+              showSignInDialog={ this.showSignInDialog }
+              hideSignInDialog={ this.hideSignInDialog }
+              showModal={ this.state.showModal }
             />
         )
     }
@@ -28,13 +42,15 @@ class HomeContainer extends Component {
 
 export function mapStateToProps(state) {
   return {
-    name: state.hello.name
+    status: state.status.list,
+    history: state.history.list
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    onNameChange: (e) => dispatch(changeName(e.target.value))
+    handleRemoveClick: (id, resource) => dispatch(removeResource({id, resource})),
+    handleAddClick: (id, newResrouces) => dispatch(addResource({id, newResrouces}))
   };
 }
 
